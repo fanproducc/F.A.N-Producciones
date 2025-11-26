@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>F.A.N Producciones — Eventos & Espectáculos</title>
+  <meta name="description" content="F.A.N Producciones — productora de eventos, teatro musical y talleres artísticos." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --accent:#ff5a5f; --dark:#0f1724; --muted:#6b7280; --glass: rgba(255,255,255,0.06);} 
+    *{box-sizing:border-box} html,body{height:100%;margin:0;font-family:'Poppins',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#0b1220;background:linear-gradient(180deg,#06070a 0%,#0b0f14 100%);} 
+    a{color:var(--accent);text-decoration:none}
+    header{position:sticky;top:0;backdrop-filter: blur(6px);background:linear-gradient(180deg,rgba(2,6,23,0.6),rgba(2,6,23,0.35));border-bottom:1px solid rgba(255,255,255,0.03);z-index:50}
+    .container{max-width:1100px;margin:0 auto;padding:1rem}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff9a76);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+    nav a{padding:.5rem .6rem;border-radius:8px;font-weight:600;color:rgba(255,255,255,0.9)}
+    nav a:hover{background:rgba(255,255,255,0.03)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:3rem 0}
+    .hero h1{font-size:2.2rem;margin:0 0 .5rem;color:white}
+    .lead{color:var(--muted);line-height:1.5}
+    .cta-row{margin-top:1.2rem;display:flex;gap:.75rem}
+    .btn{background:var(--accent);color:white;padding:.75rem 1rem;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.08)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:1rem;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .quick-list{display:flex;flex-direction:column;gap:.6rem}
+
+    /* Sections */
+    section{padding:3rem 0}
+    h2{margin:0 0 1rem;font-size:1.25rem;color:white}
+    p.lead-muted{color:var(--muted)}
+
+    /* Services grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .service{padding:1rem;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.02));}
+    .service h3{margin:.4rem 0 0;font-size:1rem}
+    .service p{color:var(--muted);margin:.4rem 0 0}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem}
+    .gallery img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+
+    /* Calendar */
+    .events{display:flex;flex-direction:column;gap:.6rem}
+    .event{display:flex;gap:.8rem;align-items:center;padding:.6rem;border-radius:10px;background:rgba(255,255,255,0.02)}
+    .event .date{min-width:68px;padding:.4rem .6rem;border-radius:8px;background:var(--glass);text-align:center}
+
+    /* Contact */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+    input,textarea,select{padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:white}
+    textarea{grid-column:1/-1;min-height:120px}
+    .foot{padding:1.5rem 0;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      form{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">FAN</div>
+        <div>
+          <div style="font-weight:700;color:white">F.A.N Producciones</div>
+          <div style="font-size:12px;color:var(--muted)">Eventos · Teatro · Talleres</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proximos">Próximos</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="inicio" class="hero">
+      <div>
+        <h1>Hacemos que tus eventos cobren vida</h1>
+        <p class="lead">F.A.N Producciones crea espectáculos memorables: teatro musical, conciertos, eventos corporativos y talleres artísticos. Producción integral: dirección, casting, escenografía, sonido e iluminación.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contacto">Solicitar cotización</a>
+          <a class="btn ghost" href="#proximos">Ver próximos shows</a>
+        </div>
+
+        <div style="margin-top:1.4rem" class="card">
+          <strong>Destacados</strong>
+          <div class="quick-list" style="margin-top:.6rem">
+            <div style="display:flex;justify-content:space-between"><span>Producción integral</span><span style="color:var(--muted)">Desde pre a post</span></div>
+            <div style="display:flex;justify-content:space-between"><span>Workshops</span><span style="color:var(--muted)">Actuación · Canto · Coreo</span></div>
+            <div style="display:flex;justify-content:space-between"><span>Alquiler de equipo</span><span style="color:var(--muted)">Sonido · Luces · Backline</span></div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin:0 0 .4rem">Contacto rápido</h3>
+          <p style="margin:0;color:var(--muted)">¿Listo para planear tu show? Escríbenos y te respondemos en 24 h hábiles.</p>
+          <div style="margin-top:1rem">
+            <div style="font-weight:700">Correo</div>
+            <div style="color:var(--muted);font-size:14px">hola@fanproducciones.co</div>
+            <div style="height:8px"></div>
+            <div style="font-weight:700">Teléfono</div>
+            <div style="color:var(--muted);font-size:14px">+57 300 000 0000</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="servicios">
+      <h2>Nuestros servicios</h2>
+      <p class="lead-muted">Diseñamos experiencias en vivo para todo tipo de público. Ofrecemos solución completa o por módulos.</p>
+      <div class="grid" style="margin-top:1rem">
+        <div class="service">
+          <strong>Producción escénica</strong>
+          <h3>Teatro musical y montaje</h3>
+          <p>Dirección artística, casting, dirección musical, vestuario y coreografía.</p>
+        </div>
+        <div class="service">
+          <strong>Eventos corporativos</strong>
+          <h3>Conferencias y lanzamientos</h3>
+          <p>Producción técnica, logística, presentadores y apoyo audiovisual.</p>
+        </div>
+        <div class="service">
+          <strong>Conciertos y festivales</strong>
+          <h3>From small clubs to big stages</h3>
+          <p>Backline, PA, iluminación y producción de escenario.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proximos">
+      <h2>Próximos eventos</h2>
+      <p class="lead-muted">Agenda de presentaciones y talleres — entradas y reservas.</p>
+      <div class="events" style="margin-top:1rem">
+        <div class="event">
+          <div class="date"><strong>05 Dic</strong><div style="font-size:12px;color:var(--muted)">2025</div></div>
+          <div>
+            <div style="font-weight:700">Gala Musical: Voces del Barrio</div>
+            <div style="color:var(--muted);font-size:13px">Teatro Libre — 7:00 PM · Entradas en venta</div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="date"><strong>18 Ene</strong><div style="font-size:12px;color:var(--muted)">2026</div></div>
+          <div>
+            <div style="font-weight:700">Taller: Técnicas de Performance</div>
+            <div style="color:var(--muted);font-size:13px">4 sesiones · Inscripciones abiertas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <h2>Galería</h2>
+      <p class="lead-muted">Momentos de producciones pasadas.</p>
+      <div class="gallery" style="margin-top:1rem">
+        <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=1200&q=80&auto=format&fit=crop" alt="escena 1">
+        <img src="https://images.unsplash.com/photo-1508973374590-3b78e4626b15?w=1200&q=80&auto=format&fit=crop" alt="escena 2">
+        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=1200&q=80&auto=format&fit=crop" alt="escena 3">
+        <img src="https://images.unsplash.com/photo-1515165562835-cb1b8b3e3c58?w=1200&q=80&auto=format&fit=crop" alt="escena 4">
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p class="lead-muted">Cuéntanos tu idea y te devolvemos una propuesta personalizada.</p>
+      <form onsubmit="handleContact(event)">
+        <input type="text" id="name" placeholder="Nombre / Organización" required>
+        <input type="email" id="email" placeholder="Correo electrónico" required>
+        <input type="text" id="phone" placeholder="Teléfono (opcional)">
+        <select id="service">
+          <option value="Produccion">Producción escénica</option>
+          <option value="Evento">Evento corporativo</option>
+          <option value="Concierto">Concierto / Festival</option>
+          <option value="Taller">Taller / Curso</option>
+        </select>
+        <textarea id="message" placeholder="Cuéntanos los detalles (fecha, lugar, público estimado)..." required></textarea>
+        <button class="btn" type="submit">Enviar solicitud</button>
+      </form>
+    </section>
+
+    <div class="foot">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>&copy; F.A.N Producciones — Todos los derechos reservados</div>
+        <div style="color:var(--muted)">Diseño: plantilla generada por IA · Contacto: hola@fanproducciones.co</div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').substring(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    })
+
+    // Simple contact handler: opens the user's email client with prefilled content.
+    function handleContact(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const email=document.getElementById('email').value.trim();
+      const phone=document.getElementById('phone').value.trim();
+      const service=document.getElementById('service').value;
+      const message=document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Solicitud de producción — ' + name + ' ('+service+')');
+      const body = encodeURIComponent(`Nombre/Org: ${name}\nCorreo: ${email}\nTeléfono: ${phone}\nServicio: ${service}\n\nMensaje:\n${message}`);
+      const mailto = 'mailto:hola@fanproducciones.co?subject='+subject+'&body='+body;
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
